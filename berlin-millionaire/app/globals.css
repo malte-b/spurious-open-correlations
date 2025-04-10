@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --berlin-red: #e3000f;
+  --berlin-black: #000000;
+  --berlin-white: #ffffff;
+}
+
+body {
+  font-family: var(--font-berlin), sans-serif;
+  background-color: var(--berlin-white);
+  color: var(--berlin-black);
+}
+
+@layer components {
+  .berlin-container {
+    @apply max-w-6xl mx-auto px-4 py-8;
+  }
+
+  .berlin-heading {
+    @apply font-bold text-berlin-black uppercase;
+  }
+
+  .berlin-button-primary {
+    @apply bg-berlin-red hover:bg-berlin-red/90 text-berlin-white font-medium py-2 px-4 flex items-center justify-between;
+  }
+
+  .berlin-button-secondary {
+    @apply bg-berlin-white hover:bg-berlin-gray-100 text-berlin-black border border-berlin-red font-medium py-2 px-4 flex items-center justify-between;
+  }
+
+  .berlin-card {
+    @apply bg-berlin-white border border-berlin-gray-200;
+  }
+
+  .berlin-pattern-stripes {
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, #e3000f 10px, #e3000f 12px);
+  }
+
+  .berlin-pattern-dots {
+    background-image: radial-gradient(#e3000f 2px, transparent 2px);
+    background-size: 15px 15px;
+  }
+
+  .berlin-pattern-waves {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 5px,
+      #e3000f 5px,
+      #e3000f 7px,
+      transparent 7px,
+      transparent 12px
+    );
+  }
+}
